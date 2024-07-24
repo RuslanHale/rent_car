@@ -14,8 +14,12 @@ class CarList(ListView):
 class CarDetail(DetailView):
     model = Car
     context_object_name = "car"
-    fields = "__all__"
     template_name = "rent_app/car.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['details'] = self.object.get_details()
+        return context
 
 
 class CarCreate(CreateView):

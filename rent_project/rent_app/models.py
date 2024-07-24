@@ -15,3 +15,14 @@ class Car(models.Model):
 
     def __str__(self):
         return self.brand
+
+    def get_details(self):
+        return {
+            'brand': self.brand,
+            'automodel': self.automodel,
+            'color': self.color,
+            'number': self.number,
+            'seats': self.seats,
+            'wheels': self.wheels,
+            'fuel_capacity': self.fuel_capacity,
+        }

@@ -1,2 +1,6 @@
 <a href="{% url 'cars' %}"> Go back</a>
-{{ car }}
+<ul>
+{% for key, val in details.items %}
+    <li><strong>{{ key }}</strong> {{ val }}</li>
+{% endfor %}
+</ul>
