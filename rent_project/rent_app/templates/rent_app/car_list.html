@@ -1,0 +1,20 @@
+<h1> Car list</h1>
+
+<table>
+    <tr>
+        <th>Item</th>
+        <td></td>
+        <td></td>
+    </tr>
+    {% for car in cars %}
+    <tr>
+        <td>{{car.brand}}</td>
+        <td>{{car.number}}</td>
+        <td><a href="{% url 'car' car.id %}">View</a> </td>
+    </tr>
+    <tr>
+    {% empty %}
+        <h3>No items in list</h3>
+    </tr>
+    {% endfor %}
+</table>
