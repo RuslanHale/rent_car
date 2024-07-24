@@ -1,4 +1,5 @@
 <h1> Car list</h1>
+<a href="{% url 'car-create' %}">Add car</a>
 
 <table>
     <tr>
@@ -11,6 +12,9 @@
         <td>{{car.brand}}</td>
         <td>{{car.number}}</td>
         <td><a href="{% url 'car' car.id %}">View</a> </td>
+        <td><a href="{% url 'car-update' car.id %}">Edit</a> </td>
+        <td><a href="{% url 'car-delete' car.id %}">Delete</a></td>
+
     </tr>
     <tr>
     {% empty %}
