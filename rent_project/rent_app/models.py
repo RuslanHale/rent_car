@@ -14,7 +14,7 @@ class Car(models.Model):
     fuel_capacity = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.brand
+        return f"{self.brand}, {self.number}, {self.color}"
 
     def get_details(self):
         return {

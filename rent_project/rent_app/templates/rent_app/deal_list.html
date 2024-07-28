@@ -1,5 +1,5 @@
 <h1> Deal list</h1>
-<a>Add deal</a>
+<a href="{% url 'deal-create' %}">Add deal</a>
 
 <table>
     <tr>
@@ -10,10 +10,10 @@
     {% for deal in deals %}
     <tr>
         <td>{{deal.number}}</td>
-        <td>{{deal.car_id}}</td>
-        <td><a>View</a> </td>
-        <td><a>Edit</a> </td>
-        <td><a>Delete</a></td>
+        <td>{{deal.car_id.get_details}}</td>
+        <td><a href="{% url 'deal' deal.id %}">View</a> </td>
+        <td><a href="{% url 'deal-update' deal.id %}">Edit</a> </td>
+        <td><a href="{% url 'deal-delete' deal.id %}">Delete</a></td>
 
     </tr>
     <tr>

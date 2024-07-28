@@ -43,3 +43,32 @@ class CarDelete(DeleteView):
 class DealList(ListView):
     model = Deal
     context_object_name = 'deals'
+
+
+class DealDetail(DetailView):
+    model = Deal
+    context_object_name = "deal"
+    template_name = "rent_app/deal.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['details'] = self.object.get_details()
+        return context
+
+
+class DealCreate(CreateView):
+    model = Deal
+    fields = "__all__"
+    success_url = reverse_lazy("deals")
+
+
+class DealUpdate(UpdateView):
+    model = Deal
+    fields = "__all__"
+    success_url = reverse_lazy("deals")
+
+
+class DealDelete(DeleteView):
+    model = Deal
+    context_object_name = "deal"
+    success_url = reverse_lazy("deals")

@@ -1,0 +1,6 @@
+<a href="{% url 'deals' %}"> Go back</a>
+<ul>
+{% for key, val in details.items %}
+    <li><strong>{{ key }}</strong> {{ val }}</li>
+{% endfor %}
+</ul>
