@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Car
+from .models import Car, Deal
 from django.http import HttpResponse
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -38,3 +38,8 @@ class CarDelete(DeleteView):
     model = Car
     context_object_name = "car"
     success_url = reverse_lazy("cars")
+
+
+class DealList(ListView):
+    model = Deal
+    context_object_name = 'deals'

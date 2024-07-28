@@ -1,0 +1,24 @@
+<h1> Deal list</h1>
+<a>Add deal</a>
+
+<table>
+    <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+    </tr>
+    {% for deal in deals %}
+    <tr>
+        <td>{{deal.number}}</td>
+        <td>{{deal.car_id}}</td>
+        <td><a>View</a> </td>
+        <td><a>Edit</a> </td>
+        <td><a>Delete</a></td>
+
+    </tr>
+    <tr>
+    {% empty %}
+        <h3>No deals in list</h3>
+    </tr>
+    {% endfor %}
+</table>
