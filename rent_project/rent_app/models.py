@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 
 class Car(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     brand = models.CharField(max_length=50)
     automodel = models.CharField(max_length=50)
     color = models.CharField(max_length=50)
