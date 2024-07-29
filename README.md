@@ -10,14 +10,12 @@
 ```pip -install requirements.txt```
 6. Load PostgreSQL to your computer https://www.postgresql.org/download/
 Create password and remember that. Change database password in rent_project/settings.py to your own. 
-8. Install PostgreSQL to Django
-```pip install psycopg2```
-9. Find pgAdmin and log in there
-10. In pgAdmin create database and name it "rent_database"
-11. Make migrations
+7. Find pgAdmin and log in there
+8. In pgAdmin create database and name it "rent_database"
+9. Make migrations
 ```py manage.py makemigrations```
 ```py manage.py migrate```
-12. Create super user
+10. Create super user
 ```py manage.py superuser```
-13. Launch your server
+11. Launch your server
 ```py manage.py runserver```
