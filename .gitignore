@@ -1,8 +1,9 @@
+/rent_project/rent_project/.env
 .DS_Store
 .vscode/
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 
