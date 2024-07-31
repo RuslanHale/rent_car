@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
-
+from django.utils import timezone
 
 class Car(models.Model):
     brand = models.CharField(max_length=50)
@@ -30,8 +30,9 @@ class Car(models.Model):
 class Deal(models.Model):
     number = models.CharField(max_length=50)
     car_id = models.ForeignKey(Car, on_delete=models.CASCADE, null=True, blank=True)
-    date_rent_beg = models.DateTimeField()
+    date_rent_beg = models.DateTimeField(default=timezone.now)
     date_rent_fin = models.DateTimeField()
+
 
     def __str__(self):
         return self.number
@@ -42,3 +43,7 @@ class Deal(models.Model):
             'date_rent_beg': self.date_rent_beg,
             'date_rent_fin': self.date_rent_fin,
         }
+
+    # def formatted_date(self):
+    #     for date in (self.date_rent_beg, self.date_rent_fin)
+        
