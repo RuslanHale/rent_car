@@ -74,3 +74,7 @@ class DealDelete(DeleteView):
     model = Deal
     context_object_name = "deal"
     success_url = reverse_lazy("deals")
+
+
+def homepage(request):
+    return render(request, 'rent_app/homepage.html')
