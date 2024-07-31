@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import CarList, CarDetail, CarCreate, CarUpdate, CarDelete, DealList, DealDetail, DealCreate, DealUpdate, \
-    DealDelete
+
+from .views import (CarCreate, CarDelete, CarDetail, CarList, CarUpdate,
+                    DealCreate, DealDelete, DealDetail, DealList, DealUpdate)
 
 urlpatterns = [
     path('', CarList.as_view(), name= "cars"),

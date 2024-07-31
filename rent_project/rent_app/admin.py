@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Car, Deal
 
 # Register your models here.

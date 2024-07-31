@@ -1,10 +1,12 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Car, Deal
 from django.http import HttpResponse
-from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.list import ListView
+
+from .models import Car, Deal
+
 
 class CarList(ListView):
     model = Car
