@@ -4,8 +4,8 @@ from .views import (CarCreate, CarDelete, CarDetail, CarList, CarUpdate,
                     DealCreate, DealDelete, DealDetail, DealList, DealUpdate, homepage)
 
 urlpatterns = [
-    path('', homepage, name= "homepage"),
-    path('cars/', CarList.as_view(), name= "cars"),
+    path('', homepage, name="homepage"),
+    path('cars/', CarList.as_view(), name="cars"),
     path("car/<int:pk>/", CarDetail.as_view(), name="car"),
     path('car-create/', CarCreate.as_view(), name='car-create'),
     path("car-update/<int:pk>/", CarUpdate.as_view(), name="car-update"),
